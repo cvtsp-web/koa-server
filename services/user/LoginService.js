@@ -1,5 +1,6 @@
 const LoginInfo =  require('../../models/user/login')
 const models = require('../../models')
+const redis = require('../../config/redisConfig')
 
 /**
  * @fileOverview: 登陆
@@ -15,7 +16,7 @@ class LoginService {
             userName
         });
 
-        this.createToken(userName);
+        redis.set(this.createToken(userName), results);
         return {
             flag: results ? true : false,
             data: results
