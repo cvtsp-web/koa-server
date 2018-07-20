@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
  */
 const dbBaseOptions = {
     name: 'cvtsp_ts_server',
-    host: 'localhost',
+    host: '10.10.12.207',
     port: 27017
 }
 exports.dbBaseOptions = dbBaseOptions;

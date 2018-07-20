@@ -20,6 +20,7 @@ class LoginService {
             flag: results ? true : false,
             data: results
         };
+        
     }
 
     // 存储用户帐号
